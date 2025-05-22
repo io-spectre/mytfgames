@@ -46,6 +46,9 @@ function main(ev: MessageEvent) {
         enableV12Overflowmenu
         enableV12TileDefaultIcons
         enableV12TileRadioIcons
+        flags={{
+          "enable-experimental-tile-contrast": true,
+        }}
       >
         <IpcContext value={boundservices}>
           <ReduxProvider store={store}>

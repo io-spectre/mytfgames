@@ -9,6 +9,7 @@ import {
 } from "electron/main";
 import { inject, injectable } from "inversify";
 import mime from "mime/lite";
+import * as R from "remeda";
 import * as uuid from "uuid";
 
 import { GameDataService, GameSId } from "$ipc/main-renderer";
@@ -42,22 +43,25 @@ export class HtmlGamePlayService {
   ) {}
 
   @remoteProcedure(GameDataService, "startGame")
-  async startGame(gameSId: GameSId, version: string) {
+  async startGame(gameSId: GameSId, version?: string) {
     const gameId = uuid.parse(gameSId) as GameId;
-    const gameArtifact = await this.db
-      .selectFrom("game_version_artifact")
-      .where("game_id", "=", gameId)
-      .where("version", "=", version)
-      .where("platform_type", "=", "html")
-      .select("node_no as nodeNo")
-      .executeTakeFirst();
+    const gameArtifact =
+      version == null
+        ? await this.findNewestGameVersion(gameId)
+        : await this.db
+            .selectFrom("game_version_artifact")
+            .where("game_id", "=", gameId)
+            .where("version", "=", version)
+            .where("platform_type", "=", "html")
+            .select(["version", "node_no as nodeNo"])
+            .executeTakeFirst();
     if (!gameArtifact) {
       throw new Error("Game artifact not found");
     }
     gameSId = uuid.stringify(gameId);
 
     const gameSession = this.createGameSession(gameSId);
-    const gameUrl = `game://${gameSId}/${version}/`;
+    const gameUrl = `game://${gameSId}/${version ?? gameArtifact.version}/`;
 
     const window = new BrowserWindow({
       ...this.defaultWindowOptions,
@@ -169,4 +173,55 @@ export class HtmlGamePlayService {
 
     return { version, resourcePath };
   }
+
+  private async findNewestGameVersion(
+    gameId: GameId,
+  ): Promise<{ version: string; nodeNo: bigint } | undefined> {
+    const artifacts = await this.db
+      .selectFrom("game_version_artifact")
+      .where("game_id", "=", gameId)
+      .where("platform_type", "=", "html")
+      .select(["version", "node_no as nodeNo"])
+      .orderBy("version", "desc")
+      .execute();
+    if (artifacts.length === 0) {
+      return undefined;
+    }
+
+    const defaultArtifact = artifacts.reduce((highest, current) =>
+      compareVersions(highest.version, current.version) < 0 ? current : highest,
+    );
+    return defaultArtifact;
+  }
+}
+
+const versionRegex = /^((?:\d+)(?:\.\d+))*(?:-(.+))$/;
+function compareVersions(left: string, right: string): number {
+  const leftMatch = versionRegex.exec(left);
+  const rightMatch = versionRegex.exec(right);
+  if (leftMatch == null || rightMatch == null) {
+    return 0;
+  }
+  const leftVersionParts = leftMatch[1]!.split(".").map(Number.parseInt);
+  const rightVersionParts = rightMatch[1]!.split(".").map(Number.parseInt);
+  const length = Math.max(leftVersionParts.length, rightVersionParts.length);
+  for (let i = 0; i < length; i++) {
+    const leftPart = leftVersionParts[i] ?? 0;
+    const rightPart = rightVersionParts[i] ?? 0;
+    if (leftPart !== rightPart) {
+      return leftPart - rightPart;
+    }
+  }
+  const leftPreRelease = leftMatch[2];
+  const rightPreRelease = rightMatch[2];
+  if (leftPreRelease === rightPreRelease) {
+    return 0;
+  }
+  if (leftPreRelease == null) {
+    return 1;
+  }
+  if (rightPreRelease == null) {
+    return -1;
+  }
+  return leftPreRelease < rightPreRelease ? -1 : 1;
 }

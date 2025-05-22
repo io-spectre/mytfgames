@@ -14,11 +14,12 @@ import {
   SkipToContent,
 } from "@carbon/react";
 import { useEffect } from "react";
-import { Link, Redirect, Route, Router, Switch } from "wouter";
+import { Link, Route, Router, Switch } from "wouter";
 
 import NotFound from "./NotFound.tsx";
 import GamePage from "./routes/games/game/GamePage.tsx";
 import GamesPage from "./routes/games/GamesPage.tsx";
+import HomePage from "./routes/home/HomePage.tsx";
 
 interface HeaderContainerRenderProps {
   isSideNavExpanded: boolean;
@@ -65,7 +66,7 @@ function AppWithShell({
       <Content id="main-content">
         <Switch>
           <Route path="/">
-            <Redirect to="/games" />
+            <HomePage />
           </Route>
           <Route path="/games">
             <GamesPage />

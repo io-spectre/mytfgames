@@ -128,7 +128,7 @@ export const GameDataService = makeRemoteServiceDescriptor("games:data", {
   >(),
 
   startGame: makeRemoteProcedureDescriptor<
-    [gameSId: GameSId, version: string],
+    [gameSId: GameSId, version?: string],
     void
   >(),
 });

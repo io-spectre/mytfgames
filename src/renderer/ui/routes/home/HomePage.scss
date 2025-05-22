@@ -1,0 +1,7 @@
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/react/scss/theme" as *;
+@use "@carbon/react/scss/type" as *;
+
+.home__last-played {
+  padding: $spacing-05;
+}
