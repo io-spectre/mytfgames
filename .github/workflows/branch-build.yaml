@@ -18,7 +18,7 @@ jobs:
             cache: ""
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Enable Corepack (non-Windows)
         if: startsWith(matrix.os, 'windows') == false
         run: corepack enable
@@ -51,7 +51,7 @@ jobs:
             cache: ""
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Enable Corepack (non-Windows)
         if: startsWith(matrix.os, 'windows') == false
         run: corepack enable
