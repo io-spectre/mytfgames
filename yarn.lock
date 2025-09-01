@@ -3475,16 +3475,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron@npm:^35.2.1":
-  version: 35.2.1
-  resolution: "electron@npm:35.2.1"
+"electron@npm:^37.4.0":
+  version: 37.4.0
+  resolution: "electron@npm:37.4.0"
   dependencies:
     "@electron/get": "npm:^2.0.0"
     "@types/node": "npm:^22.7.7"
     extract-zip: "npm:^2.0.1"
   bin:
     electron: cli.js
-  checksum: 10c0/ab6e2ad8efb71d2a68c5088fef1fc53785d76ad602d3957a3ba86b9f6e2fb8ce261843a6bc782b18e2e55ec1844e46157330e4152b55d049de7a72ccc68fbb49
+  checksum: 10c0/92a0c41190e234d302bc612af6cce9af08cd07f6699c1ff21a9365297e73dc9d88c6c4c25ddabf352447e3e555878d2ab0f2f31a14e210dda6de74d2787ff323
   languageName: node
   linkType: hard
 
@@ -5817,7 +5817,7 @@ __metadata:
     domelementtype: "npm:^2.3.0"
     domhandler: "npm:^5.0.3"
     dompurify: "npm:^3.2.5"
-    electron: "npm:^35.2.1"
+    electron: "npm:^37.4.0"
     electron-devtools-installer: "npm:^4.0.0"
     eslint: "npm:^9.25.1"
     eslint-config-prettier: "npm:^9.1.0"
@@ -5908,11 +5908,11 @@ __metadata:
   linkType: hard
 
 "node-abi@npm:^3.3.0, node-abi@npm:^3.45.0":
-  version: 3.74.0
-  resolution: "node-abi@npm:3.74.0"
+  version: 3.75.0
+  resolution: "node-abi@npm:3.75.0"
   dependencies:
     semver: "npm:^7.3.5"
-  checksum: 10c0/a6c83c448d5e8b591f749a0157c9ec02f653021cdf3415c1a44fcb5fc8afc124acad186bc1ec76cb4db2485cc2dcdda187aacd382c54b6e3093ffc0389603643
+  checksum: 10c0/c43a2409407df3737848fd96202b0a49e15039994aecce963969e9ef7342a8fc544aba94e0bfd8155fb9de5f5fe9a4b6ccad8bf509e7c46caf096fc4491d63f2
   languageName: node
   linkType: hard
 
