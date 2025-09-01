@@ -2521,14 +2521,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"better-sqlite3@npm:^11.9.1":
-  version: 11.9.1
-  resolution: "better-sqlite3@npm:11.9.1"
+"better-sqlite3@npm:^12.2.0":
+  version: 12.2.0
+  resolution: "better-sqlite3@npm:12.2.0"
   dependencies:
     bindings: "npm:^1.5.0"
     node-gyp: "npm:latest"
     prebuild-install: "npm:^7.1.1"
-  checksum: 10c0/87079d95f76898ec57922cf19d375d22dcdf65a4e1f52a71022231bbee9c80f90b9eb9fa80ac7dc00bca25673fdeba89b27f5f36bb82479dbe220be4dc20071d
+  checksum: 10c0/842247e9bbb775f366ac91f604117112c312497e643bac21648d8b69f479763de0ac049b14b609d6d5ecaee50debcc09a854f682d3dc099a1d933fea92ce68d0
   languageName: node
   linkType: hard
 
@@ -5811,7 +5811,7 @@ __metadata:
     "@vitejs/plugin-react": "npm:^4.4.1"
     ajv: "npm:^8.17.1"
     archiver: "npm:^7.0.1"
-    better-sqlite3: "npm:^11.9.1"
+    better-sqlite3: "npm:^12.2.0"
     bunyan: "npm:^1.8.15"
     cheerio: "npm:^1.0.0"
     domelementtype: "npm:^2.3.0"
