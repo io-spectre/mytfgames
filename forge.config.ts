@@ -15,7 +15,6 @@ const config: ForgeConfig = {
   },
   rebuildConfig: {
     onlyModules: ["better-sqlite3"],
-    force: true, // better-sqlite3 uses prebuilds, so this is inxepensive
   },
   makers: [
     new MakerZIP(),
