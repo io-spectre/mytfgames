@@ -18,7 +18,6 @@ export default defineConfig((env) => {
       lib:
         forgeConfigSelf?.entry != null
           ? {
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
               entry: forgeConfigSelf.entry,
               fileName: () => "[name].mjs",
               formats: ["es"],
