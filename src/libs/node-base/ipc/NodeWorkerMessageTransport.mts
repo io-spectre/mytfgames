@@ -1,4 +1,4 @@
-import { TransferListItem, Worker } from "node:worker_threads";
+import { Transferable, Worker } from "node:worker_threads";
 
 import { IpcEventArgs, IpcMessage, MessageTransport } from "$pure-base/ipc";
 
@@ -40,6 +40,6 @@ export class NodeWorkerMessageTransport implements MessageTransport {
     }
   }
   postMessage(message: IpcMessage, transfer: unknown[] = []): void {
-    this.port.postMessage(message, transfer as TransferListItem[]);
+    this.port.postMessage(message, transfer as Transferable[]);
   }
 }
