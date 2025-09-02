@@ -27,7 +27,7 @@
     "ajv": "^8.17.1",
     "better-sqlite3": "^12.2.0",
     "bunyan": "^1.8.15",
-    "cheerio": "^1.0.0",
+    "cheerio": "^1.1.2",
     "domelementtype": "^2.3.0",
     "domhandler": "^5.0.3",
     "dompurify": "^3.2.5",
