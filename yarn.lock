@@ -4658,10 +4658,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"immer@npm:^10.0.3, immer@npm:^10.1.1":
+"immer@npm:^10.0.3":
   version: 10.1.1
   resolution: "immer@npm:10.1.1"
   checksum: 10c0/b749e10d137ccae91788f41bd57e9387f32ea6d6ea8fd7eb47b23fd7766681575efc7f86ceef7fe24c3bc9d61e38ff5d2f49c2663b2b0c056e280a4510923653
+  languageName: node
+  linkType: hard
+
+"immer@npm:^10.1.3":
+  version: 10.1.3
+  resolution: "immer@npm:10.1.3"
+  checksum: 10c0/b3929022c1999935c9c5e9491fce20d883c15a04072628056f3b8c51a63ac0876d1c1f25cec146e325c30c906bc7f15a636c29ed53156f0a3049150f152df4c8
   languageName: node
   linkType: hard
 
@@ -5650,7 +5657,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.20"
     eslint-plugin-simple-import-sort: "npm:^12.1.1"
     gray-matter: "patch:gray-matter@npm%3A4.0.3#~/.yarn/patches/gray-matter-npm-4.0.3-852ae4f34c.patch"
-    immer: "npm:^10.1.1"
+    immer: "npm:^10.1.3"
     inversify: "npm:^7.9.1"
     js-yaml: "npm:^4.1.0"
     kysely: "npm:^0.28.5"
