@@ -162,9 +162,9 @@ export async function dbfsMakeDirectoryNodeImpl(
 
         .selectFrom(["node"])
         .select("node.node_no")
-        .select(sql<bigint>`-1`.as("node_no_parent"))
+        .select(sql<bigint | number>`-1`.as("node_no_parent"))
         // i is the _next_ segment number on an one-based sequence
-        .select(sql<bigint>`1`.as("i"))
+        .select(sql<bigint | number>`1`.as("i"))
         .where("node.node_no", "=", parentNo)
         .unionAll((uac) =>
           uac
@@ -219,7 +219,7 @@ export async function dbfsMakeDirectoryNodeImpl(
 
 async function dbfsMakeSimpleDirectoryNode(
   qc: AppQueryCreator,
-  node_no_parent: bigint,
+  node_no_parent: bigint | number,
   name: string,
 ): Promise<bigint> {
   const insertRx = await qc
@@ -229,7 +229,7 @@ async function dbfsMakeSimpleDirectoryNode(
   if (insertRx.insertId == null) {
     throw makeLogicError("Failed to create a directory node");
   }
-  const node_no = BigInt(insertRx.insertId);
+  const node_no = insertRx.insertId;
   await Promise.all([
     qc.insertInto("node_directory").values({ directory_no: node_no }).execute(),
     qc

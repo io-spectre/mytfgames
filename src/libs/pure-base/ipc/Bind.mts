@@ -52,7 +52,7 @@ export function remoteProcedure<
   ) {
     if (Reflect.hasMetadata(ProcedureMetadata, target, key)) {
       throw new Error(
-        `Duplicate remote procedure binding for ${key} (as ${proto[RemoteServiceKey]}:${procId.toString()})`,
+        `Duplicate remote procedure binding for ${key} (as ${proto[RemoteServiceKey]}:${procId})`,
       );
     }
 

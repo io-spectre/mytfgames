@@ -41,28 +41,28 @@ export const WellKnownDirectory = Object.freeze(
   ),
 );
 export interface NodeTable {
-  node_no: Generated<bigint>;
+  node_no: Generated<bigint | number>;
   node_type: string;
 }
 
 export interface NodeDirectoryTable {
-  directory_no: bigint;
+  directory_no: bigint | number;
 }
 export interface NodeMemberTable {
-  node_no: bigint;
+  node_no: bigint | number;
   name: string;
-  node_no_parent: bigint;
+  node_no_parent: bigint | number;
 }
 
 export interface NodeFileTable {
-  file_no: bigint;
+  file_no: bigint | number;
   unix_mode: number;
   blake3_hash: Buffer;
 }
 
 export interface NodeFileContentTable {
   blake3_hash: Buffer;
-  size: bigint;
+  size: bigint | number;
   /**
    * The content of the file. If NULL, the file is stored directly in the FS.
    */

@@ -161,7 +161,7 @@ export class ArtifactsOperationSchedule
     return [
       ...cleanupNodeNos.map(
         ({ node_no }) =>
-          new DbfsNodeCleanupJob(this.configuration, this.db, node_no),
+          new DbfsNodeCleanupJob(this.configuration, this.db, BigInt(node_no)),
       ),
       new DbfsContentCleanupJob(this.configuration, this.db),
     ];

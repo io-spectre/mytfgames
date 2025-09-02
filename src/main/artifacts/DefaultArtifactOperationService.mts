@@ -69,7 +69,7 @@ export class DefaultArtifactOperationService
         })
         .returning("node_no as node_no")
         .executeTakeFirstOrThrow();
-      return artifactRow.node_no;
+      return BigInt(artifactRow.node_no);
     });
   }
 
@@ -126,6 +126,6 @@ export class DefaultArtifactOperationService
     const versionInfo =
       await this.gameVersionService.retrieveVersionInfoForGame(gameId, version);
     this.remoteRedux.dispatch(gameVersionUpdated(versionInfo));
-    return nodeNo;
+    return BigInt(nodeNo);
   }
 }
