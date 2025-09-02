@@ -57,7 +57,7 @@
     "@electron-forge/plugin-fuses": "~7.8.3",
     "@electron-forge/plugin-vite": "~7.8.3",
     "@electron-forge/shared-types": "~7.8.3",
-    "@electron/fuses": "^1.8.0",
+    "@electron/fuses": "^2.0.0",
     "@eslint/js": "^9.34.0",
     "@napi-rs/blake-hash": "^1.3.4",
     "@types/archiver": "^6.0.3",
