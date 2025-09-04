@@ -59,7 +59,7 @@ function run() {
         // eslint-disable-next-line no-console
         console.error("Failed to apply migrations.\n", error);
         dialog.showErrorBox(
-          "MyTFGames failed to start",
+          "SpF Ludex failed to start",
           utils.format("Failed to apply database migrations.\n", error),
         );
         app.exit(-2);
@@ -69,7 +69,7 @@ function run() {
       // eslint-disable-next-line no-console
       console.error(`MainApp.run() failed.\n`, error);
       dialog.showErrorBox(
-        "MyTFGames failed in an unexpected way",
+        "SpF Ludex failed in an unexpected way",
         utils.format("", error),
       );
       app.exit(-1);
@@ -170,7 +170,7 @@ function wrapStartupErrors<T, TArgs extends unknown[]>(
     try {
       return fn(...args);
     } catch (error) {
-      throw new StartupError("MyTFGames failed to start", message, error);
+      throw new StartupError("SpF Ludex failed to start", message, error);
     }
   }
 }
@@ -190,7 +190,7 @@ if (!__CATCH_MAIN_EXCEPTIONS__ || inspector.url()) {
       // eslint-disable-next-line no-console
       console.error("Unhandled error in main process", error);
       dialog.showErrorBox(
-        "MyTFGames failed to start",
+        "SpF Ludex failed to start",
         utils.format("An unknown error occurred.\n", error),
       );
     }

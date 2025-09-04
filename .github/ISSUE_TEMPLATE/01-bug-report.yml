@@ -1,0 +1,73 @@
+name: 🐞 Bug Report
+description: File a bug report.
+type: Bug
+projects: ["spectreforge/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the bug you encountered.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: textarea
+    id: quick-info
+    attributes:
+      label: Quick Information
+      description: |
+        This is to help replicate the issue as closely as possible
+
+        examples:
+          - **SpF Ludex Version**: 0.0.1
+          - **Operating System**: Ubuntu 20.04
+      value: |
+        - **SpF Ludex Version**:
+        - **Operating System**:
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A brief description of what happened when you tried to perform an action.
+      placeholder: Tell us what you saw!
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Result
+      description: What should have happened when you performed the actions?
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Please list the steps required to produce the error. These should be kept to a minimum.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs
+      description: |
+        If you can, please zip and upload your logs folder or the relevant log file from
+        - Windows: "%APPDATA%/SpF-Ludex/logs"
+        - Linux: "$XDG_CONFIG_HOME/SpF-Ludex/logs" or "~/.config/SpF-Ludex/logs"
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Is there any other context about the problem that might be relevant?
+      placeholder: E.g., screenshots, etc.

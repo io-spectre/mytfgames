@@ -1,16 +1,16 @@
 export enum ErrorTypeId {
-  AbortError = "io.gitgud/ioV9x/mytfgames#AbortError",
-  AggregateError = "io.gitgud/ioV9x/mytfgames#AggregateError",
-  DbfsError = "io.gitgud/ioV9x/mytfgames#DbfsError",
-  ErrnoException = "io.gitgud/ioV9x/mytfgames#ErrnoException",
-  ExternalApiError = "io.gitgud/ioV9x/mytfgames#ExternalApiError",
-  LogicError = "io.gitgud/ioV9x/mytfgames#LogicError",
-  TransferredError = "io.gitgud/ioV9x/mytfgames#TransferredError",
-  TransportClosedError = "io.gitgud/ioV9x/mytfgames#TransportClosedError",
+  AbortError = "io.github.spectreforge/ludex#AbortError",
+  AggregateError = "io.github.spectreforge/ludex#AggregateError",
+  DbfsError = "io.github.spectreforge/ludex#DbfsError",
+  ErrnoException = "io.github.spectreforge/ludex#ErrnoException",
+  ExternalApiError = "io.github.spectreforge/ludex#ExternalApiError",
+  LogicError = "io.github.spectreforge/ludex#LogicError",
+  TransferredError = "io.github.spectreforge/ludex#TransferredError",
+  TransportClosedError = "io.github.spectreforge/ludex#TransportClosedError",
 }
 
 const ExtendedErrorType = Symbol.for(
-  "io.gitgud/ioV9x/mytfgames#ExtendedErrorType",
+  "io.github.spectreforge/ludex#ExtendedErrorType",
 );
 interface ExtendedError extends Error {
   readonly [ExtendedErrorType]: true;

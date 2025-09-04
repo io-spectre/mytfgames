@@ -30,7 +30,7 @@ function AppWithShell({
 }: HeaderContainerRenderProps) {
   return (
     <>
-      <Header aria-label="My TFGames">
+      <Header aria-label="SpF Ludex">
         <SkipToContent />
         <HeaderMenuButton
           aria-label={isSideNavExpanded ? "Close menu" : "Open menu"}
@@ -38,10 +38,10 @@ function AppWithShell({
           onClick={onClickSideNavExpand}
           isActive={isSideNavExpanded}
         />
-        <HeaderName href="/" prefix="My" as={Link}>
-          TFGames
+        <HeaderName href="/" prefix="SpF" as={Link}>
+          Ludex
         </HeaderName>
-        <HeaderNavigation aria-label="My TFGames">
+        <HeaderNavigation aria-label="SpF Ludex">
           <HeaderMenuItem href="/games" as={Link}>
             Game Index
           </HeaderMenuItem>

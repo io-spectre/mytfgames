@@ -32,7 +32,7 @@ export class MainApp {
     @inject(MainIpcServer) readonly _ipcServer: unknown,
     @inject(WorkerShim) readonly workerShim: WorkerShim,
   ) {
-    this.log.info("<===================== My TFGames =====================>");
+    this.log.info("<===================== SpF Ludex =====================>");
 
     process.addListener("unhandledRejection", (error: unknown) => {
       this.rejectionsLog.debug(error);

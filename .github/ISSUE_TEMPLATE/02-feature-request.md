@@ -4,7 +4,7 @@
 
 ## Who will benefit?
 
-<!-- Will this fix a problem that only one user has, or will it benefit a lot of people -->
+<!-- Will this fix a problem that only one user has, or will it benefit a lot of people? -->
 
 ## Benefits and risks
 
