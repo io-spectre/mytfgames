@@ -19,11 +19,11 @@
     "vitest": "cross-env ELECTRON_RUN_AS_NODE=1 electron node_modules/vitest/vitest.mjs"
   },
   "dependencies": {
-    "@carbon/colors": "^11.39.0",
-    "@carbon/grid": "^11.42.0",
-    "@carbon/icons-react": "^11.66.0",
-    "@carbon/react": "^1.90.0",
-    "@carbon/styles": "^1.89.0",
+    "@carbon/colors": "^11.40.0",
+    "@carbon/grid": "^11.43.0",
+    "@carbon/icons-react": "^11.67.0",
+    "@carbon/react": "^1.91.0",
+    "@carbon/styles": "^1.90.0",
     "@reduxjs/toolkit": "^2.9.0",
     "ajv": "^8.17.1",
     "better-sqlite3": "^12.2.0",
