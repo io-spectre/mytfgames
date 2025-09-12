@@ -1864,7 +1864,7 @@ __metadata:
     react-redux: "npm:^9.2.0"
     reflect-metadata: "npm:^0.2.2"
     remarkable: "npm:^2.0.1"
-    remeda: "npm:^2.30.0"
+    remeda: "npm:^2.31.1"
     sass: "npm:1.77.6"
     smol-toml: "npm:^1.4.2"
     temporal-polyfill: "npm:^0.3.0"
@@ -6617,12 +6617,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remeda@npm:^2.30.0":
-  version: 2.30.0
-  resolution: "remeda@npm:2.30.0"
+"remeda@npm:^2.31.1":
+  version: 2.31.1
+  resolution: "remeda@npm:2.31.1"
   dependencies:
     type-fest: "npm:^4.41.0"
-  checksum: 10c0/630b99ec63a61850b5ac1b8bde9ae9d29c992a8bd301c5f1ba7f494f4f8e467623b3f2187368ac66ded1fdb30d96ab5bcce22f0bb76775b85df41268555ba94a
+  checksum: 10c0/cd35b18fed483cbb35e411da15d2196a907fb709135e4ff767af1d5905a4b922eed2bc69d717291da0096c9ee24ddd043e661336d7446fac83de0361ef3bf35d
   languageName: node
   linkType: hard
 
