@@ -45,7 +45,7 @@
     "react-redux": "^9.2.0",
     "reflect-metadata": "^0.2.2",
     "remarkable": "^2.0.1",
-    "remeda": "^2.30.0",
+    "remeda": "^2.31.1",
     "smol-toml": "^1.4.2",
     "temporal-polyfill": "^0.3.0",
     "uuid": "^11.1.0",
