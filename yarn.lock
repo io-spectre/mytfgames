@@ -640,16 +640,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@electron/fuses@npm:^1.8.0":
-  version: 1.8.0
-  resolution: "@electron/fuses@npm:1.8.0"
-  dependencies:
-    chalk: "npm:^4.1.1"
-    fs-extra: "npm:^9.0.1"
-    minimist: "npm:^1.2.5"
+"@electron/fuses@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@electron/fuses@npm:2.0.0"
   bin:
     electron-fuses: dist/bin.js
-  checksum: 10c0/7a2eff2a700a0dc9997346a2cbef83a852ec4a743b047ef89ce8dddfb182377c3a71e340c0cd3dc729d843cccb524253f9a9b96f37271d431f4409f3d897a200
+  checksum: 10c0/f735e589d9f785ea59bf156b8b8c579d61e145958fe67f6c555b6e1b65581fefd150a53ef355079922be7d2a19fb5f4fa4262bce067badb00a3d3f7a66aa4410
   languageName: node
   linkType: hard
 
@@ -1820,7 +1816,7 @@ __metadata:
     "@electron-forge/plugin-fuses": "npm:~7.8.3"
     "@electron-forge/plugin-vite": "npm:~7.8.3"
     "@electron-forge/shared-types": "npm:~7.8.3"
-    "@electron/fuses": "npm:^1.8.0"
+    "@electron/fuses": "npm:^2.0.0"
     "@eslint/js": "npm:^9.34.0"
     "@napi-rs/blake-hash": "npm:^1.3.5"
     "@reduxjs/toolkit": "npm:^2.9.0"
@@ -1844,7 +1840,7 @@ __metadata:
     domelementtype: "npm:^2.3.0"
     domhandler: "npm:^5.0.3"
     dompurify: "npm:^3.2.6"
-    electron: "npm:^37.4.0"
+    electron: "npm:^37.5.0"
     electron-devtools-installer: "npm:^4.0.0"
     eslint: "npm:^9.34.0"
     eslint-config-prettier: "npm:^9.1.0"
@@ -2956,7 +2952,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.1":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.0":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -3565,16 +3561,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron@npm:^37.4.0":
-  version: 37.4.0
-  resolution: "electron@npm:37.4.0"
+"electron@npm:^37.5.0":
+  version: 37.5.0
+  resolution: "electron@npm:37.5.0"
   dependencies:
     "@electron/get": "npm:^2.0.0"
     "@types/node": "npm:^22.7.7"
     extract-zip: "npm:^2.0.1"
   bin:
     electron: cli.js
-  checksum: 10c0/92a0c41190e234d302bc612af6cce9af08cd07f6699c1ff21a9365297e73dc9d88c6c4c25ddabf352447e3e555878d2ab0f2f31a14e210dda6de74d2787ff323
+  checksum: 10c0/559cd659ab1313be43e89575974e3aaa6e90816b7d0aaf4f1aa4c1e74a8f183a534f94b63b1ea8a01d7999c955b204d5abc3ae3a59364be1efcebeae637c5079
   languageName: node
   linkType: hard
 
@@ -5529,7 +5525,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.0, minimist@npm:^1.2.3, minimist@npm:^1.2.5, minimist@npm:^1.2.6, minimist@npm:^1.2.8":
+"minimist@npm:^1.2.0, minimist@npm:^1.2.3, minimist@npm:^1.2.6, minimist@npm:^1.2.8":
   version: 1.2.8
   resolution: "minimist@npm:1.2.8"
   checksum: 10c0/19d3fcdca050087b84c2029841a093691a91259a47def2f18222f41e7645a0b7c44ef4b40e88a1e58a40c84d2ef0ee6047c55594d298146d0eb3f6b737c20ce6
